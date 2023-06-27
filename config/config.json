@@ -1,13 +1,8 @@
-//use js to make avoid parsing error in cli
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
-}
-
-const config = {
+{
   "development": {
     "username": "root",
-    "password": null,
-    "database": "database_development",
+    "password": "password",
+    "database": "blog",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -19,8 +14,6 @@ const config = {
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "MYSQL_URL"
+    "use_env_variable": "SQL_URL"
   }
 }
-
-module.exports = config

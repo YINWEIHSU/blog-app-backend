@@ -5,7 +5,7 @@ const { generateSlug } = require('../common/utils')
 const postController = {
   getPosts: async (req, res) => {
     const posts = await Post.cache('all').findAll({
-      attributes: ['id', 'title', 'content', 'status', 'createdAt', 'updatedAt', 'slug', 'category_id'],
+      attributes: ['id', 'title', 'content', 'status', 'createdAt', 'updatedAt', 'slug', 'categoryId'],
       include: [
         {
           model: Tag,

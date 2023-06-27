@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.addColumn('Posts', 'category_id', {
+    await queryInterface.addColumn('Posts', 'categoryId', {
       type: Sequelize.INTEGER,
       references: {
         model: 'Categories',
@@ -13,6 +13,6 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.removeColumn('Posts', 'category_id')
+    await queryInterface.removeColumn('Posts', 'categoryId')
   }
 }

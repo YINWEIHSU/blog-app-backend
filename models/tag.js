@@ -19,7 +19,9 @@ module.exports = (sequelize, DataTypes) => {
     count: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'Tag'
+    modelName: 'Tag',
+    freezeTableName: true,
+    tableName: 'Tags'
   })
   return Tag
 }
